@@ -18,6 +18,16 @@
     -30px 20px 40px dimgrey;
 }
 
+.todo {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.right {
+  margin-left: auto;
+}
+
 .done {
   text-decoration: line-through;
 }
