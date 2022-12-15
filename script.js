@@ -33,6 +33,7 @@ function createButtonElement() {
 	var btn = document.createElement("button");
 	btn.innerHTML = "Delete";
 	btn.classList.add("delete");
+	btn.classList.add("right");
 	loadButtonElements();
 	return btn;
 }
