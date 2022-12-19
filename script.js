@@ -3,6 +3,7 @@ var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var liList;
 var buttonList;
+var hrList;
 
 function inputLength() {
 	return input.value.length;
@@ -30,30 +31,47 @@ function createListElement() {
 }
 
 function createButtonElement() {
-	var btn = document.createElement("button");
-	btn.innerHTML = "Delete";
+	var btn = document.createElement("img");
+	btn.src = "Bin.png";
 	btn.classList.add("delete");
 	btn.classList.add("right");
 	loadButtonElements();
 	return btn;
 }
 
+function createHr() {
+	var hr = document.createElement("hr");
+	loadHrElements;
+	ul.appendChild(hr);
+}
+
 function addListAfterClick() {
 	if (inputLength() > 0) {
+		createHr();
 		createDivSection();
 	}
 }
 
 function addListAfterKeypress(event) {
 	if (inputLength() > 0 && event.keyCode === 13) {
+		createHr();
 		createDivSection();
 	}
 }
 
 function deleteItem(event) {
 	var item = event.target;
+	var num;
+
+	for (var i=0; i < buttonList.length; i++) {
+		if (buttonList[i] == item) {
+			num = i;
+			break;
+		}
+	}
 
 	ul.removeChild(item.parentElement);
+	ul.removeChild(hrList[num]);
 }
 
 function toggleDone(event) {
@@ -76,6 +94,10 @@ function loadButtonElements() {
 	}
 }
 
+function loadHrElements() {
+	hrList = document.getElementsByTagName("hr");
+}
+
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
@@ -83,3 +105,5 @@ input.addEventListener("keypress", addListAfterKeypress);
 loadListElements();
 
 loadButtonElements();
+
+loadHrElements();

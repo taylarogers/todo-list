@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript + DOM</title>
+	<title> To-Do List </title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Shopping List</h1>
-	<p id="first">Get it done today</p>
-	<input id="userinput" type="text" placeholder="enter items">
-	<button id="enter">Enter</button>
+	<div class="head purple stickTop">
+		<img src="Logo.png" class="logo">
+	</div>
+	<h1 class="heading"> Tasks </h1>
 	<ul>
 		<div class="todo">
 			<li>Notebook</li>
-			<button class="delete right">Delete</button>
+			<img src="Bin.png" class="delete right">
 		</div>
+		<hr>
 		<div class="todo">
 			<li>Jello</li>
-			<button class="delete right">Delete</button>
+			<img src="Bin.png" class="delete right">
 		</div>
+		<hr>
 		<div class="todo">
 			<li>Spinach</li>
-			<button class="delete right">Delete</button>
+			<img src="Bin.png" class="delete right">
 		</div>
+		<hr>
 		<div class="todo">
 			<li>Rice</li>
-			<button class="delete right">Delete</button>
+			<img src="Bin.png" class="delete right">
 		</div>
+		<hr>
 		<div class="todo">
 			<li>Birthday Cake</li>
-			<button class="delete right">Delete</button>
+			<img src="Bin.png" class="delete right">
 		</div>
+		<hr>
 		<div class="todo">
 			<li>Candles</li>
-			<button class="delete right">Delete</button>
+			<img src="Bin.png" class="delete right">
 		</div>
 	</ul>
+	<div class="add bottom stickBottom">
+		<input id="userinput" type="text" placeholder="Add new item...">
+		<img src="Add.png" id="enter">
+	</div>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
